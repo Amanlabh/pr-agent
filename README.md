@@ -1,4 +1,4 @@
-# pr-summary — Claude Code skill
+# pr-summ — Claude Code skill
 
 Fetch a pull request from **GitHub** or **Bitbucket Cloud** (auto-detected from the repo's `origin` remote) by PR number or short description, and get an editable, reusable Markdown commit summary.
 
@@ -6,15 +6,15 @@ Fetch a pull request from **GitHub** or **Bitbucket Cloud** (auto-detected from 
 
 Tell Claude Code:
 
-> Install the Claude skill from https://github.com/OWNER/REPO into ~/.claude/skills/pr-summary
+> Install the Claude skill from https://github.com/OWNER/REPO into ~/.claude/skills/pr-summ
 
 or run it yourself:
 
 ```bash
-git clone https://github.com/OWNER/REPO ~/.claude/skills/pr-summary
+git clone https://github.com/OWNER/REPO ~/.claude/skills/pr-summ
 ```
 
-Update later with `git -C ~/.claude/skills/pr-summary pull`.
+Update later with `git -C ~/.claude/skills/pr-summ pull`.
 
 **Requirements:** `git`, `jq`, `curl`
 - GitHub repos: [`gh`](https://cli.github.com) logged in (`gh auth login`)
@@ -25,8 +25,8 @@ Update later with `git -C ~/.claude/skills/pr-summary pull`.
 From inside any GitHub or Bitbucket repo:
 
 ```
-/pr-summary 42
-/pr-summary "login timeout fix"
+/pr-summ 42
+/pr-summ "login timeout fix"
 ```
 
 The summary is saved to `pr-summaries/<host>-PR-<n>.md`. To change the format, edit `template.md`.

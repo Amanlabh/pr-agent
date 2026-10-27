@@ -1,6 +1,6 @@
 ---
-name: pr-summary
-description: Fetch a pull request from GitHub or Bitbucket (auto-detected from the repo's origin remote) by PR number or short description, and write an editable, reusable commit summary in Markdown. Use when the user says "summarize PR 42", "PR summary for the login fix", "commit summary for this PR", or invokes /pr-summary.
+name: pr-summ
+description: Fetch a pull request from GitHub or Bitbucket (auto-detected from the repo's origin remote) by PR number or short description, and write an editable, reusable commit summary in Markdown. Use when the user says "summarize PR 42", "PR summary for the login fix", "commit summary for this PR", or invokes /pr-summ.
 argument-hint: <pr-number | "short description">
 allowed-tools: Bash(bash *fetch_pr.sh*), Read, Write
 ---
