@@ -1,7 +1,7 @@
 # {{title}} (#{{number}})
 
 **Branch:** `{{source}}` → `{{target}}` · **Author:** {{author}} · **State:** {{state}}
-**Link:** {{url}}
+**Repo:** {{repo}} · **Link:** {{url}}
 
 ## Summary
 <!-- 2-4 sentences: what this PR does and why -->

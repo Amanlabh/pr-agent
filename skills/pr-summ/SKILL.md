@@ -14,8 +14,10 @@ Input: `$ARGUMENTS` — a PR number (`42`, `#42`) or a short description (`login
    bash "${CLAUDE_SKILL_DIR}/fetch_pr.sh" "<number or description>"
    ```
    - Output has `matches` → description hit 0 or several PRs. 0: tell the user, ask for a number. Several: list `#number title (state)` and ask which one. Then rerun with the number.
-   - Errors about `gh` auth → tell the user to run `! gh auth login`.
-   - Errors about `BITBUCKET_EMAIL` / `BITBUCKET_TOKEN` → tell the user to export both (token: Bitbucket → Personal settings → API tokens, scope `read:pullrequest:bitbucket`).
+   - Only PRs of the current project's repo are searched (`upstream` remote if present, else `origin`); the JSON's `repo` field says which. Never fetch from another repo.
+   - "not inside a git project" → ask the user to `cd` into their project first.
+   - `gh` auth error → tell the user to run `/pr-connect git`.
+   - "Bitbucket not connected" → tell the user to run `/pr-connect bitbucket`.
 
 2. Read `${CLAUDE_SKILL_DIR}/template.md` and fill it from the JSON:
    - `{{placeholders}}` → JSON fields verbatim.
